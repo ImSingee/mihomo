@@ -111,7 +111,7 @@ func NewAnyTLS(option AnyTLSOption) (*AnyTLS, error) {
 		IdleSessionCheckInterval: time.Duration(option.IdleSessionCheckInterval) * time.Second,
 		IdleSessionTimeout:       time.Duration(option.IdleSessionTimeout) * time.Second,
 		MinIdleSession:           option.MinIdleSession,
-		DisableSessionReuse:      option.DisableSessionReuse,
+		DisableSessionReuse:      true,
 	}
 	echConfig, err := option.ECHOpts.Parse()
 	if err != nil {
